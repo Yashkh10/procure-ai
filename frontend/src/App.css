@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: #f5f6f8;
+  color: #17191c;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+header {
+  background: #111315;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: white;
+}
+
+header p {
+  margin: 4px 0 0;
+  color: #a9adb3;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #b9bec5;
+}
+
+.status span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #42c77a;
+}
+
+main {
+  width: 86%;
+  max-width: 1200px;
+  margin: 32px auto 60px;
+}
+
+.scenario-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 24px;
+}
+
+label,
+.label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #737980;
+  margin-bottom: 7px;
+}
+
+select {
+  min-width: 330px;
+  padding: 11px 14px;
+  border: 1px solid #d8dce1;
+  border-radius: 8px;
+  background: white;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary {
+  background: white;
+  border: 1px solid #d8dce1;
+}
+
+.product-header {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  padding: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.product-header p {
+  margin: 5px 0 0;
+  color: #7a8088;
+}
+
+.proposed {
+  text-align: right;
+}
+
+.proposed strong {
+  font-size: 24px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 14px 0;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card strong {
+  display: block;
+  font-size: 25px;
+}
+
+.card p {
+  margin: 5px 0 0;
+  color: #858a91;
+  font-size: 13px;
+}
+
+.panel,
+.result {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 12px;
+  margin-top: 14px;
+  padding: 24px;
+}
+
+.panel-title h3 {
+  margin: 0 0 18px;
+}
+
+.suppliers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.supplier {
+  display: grid;
+  grid-template-columns: 2fr repeat(4, 1fr);
+  align-items: center;
+  padding: 15px;
+  background: #f7f8f9;
+  border-radius: 8px;
+}
+
+.supplier > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.supplier span {
+  font-size: 12px;
+  color: #858a91;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.primary {
+  background: #111315;
+  color: white;
+}
+
+.execute {
+  background: #287a4c;
+  color: white;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e6e9;
+}
+
+.result-header h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.quantity {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.reason {
+  padding: 20px 0;
+}
+
+.reason h3,
+.evidence h3 {
+  margin: 0 0 10px;
+}
+
+.reason p {
+  line-height: 1.6;
+  color: #4d535a;
+}
+
+.evidence-item {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.evidence-item span {
+  font-weight: 700;
+}
+
+.evidence-item p {
+  margin: 0;
+  line-height: 1.45;
+  color: #50565d;
+}
+
+.validation,
+.execution {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.validation > div,
+.execution > div {
+  padding: 15px;
+  background: #f7f8f9;
+  border-radius: 8px;
+}
+
+.validation span,
+.execution span {
+  display: block;
+  font-size: 12px;
+  color: #777d84;
+  margin-bottom: 5px;
+}
+
+.success {
+  margin-top: 16px;
+  padding: 16px;
+  background: #eef8f1;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.success > span {
+  font-size: 20px;
+}
+
+.success p {
+  margin: 4px 0 0;
+  color: #53635a;
+}
+
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .supplier {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .validation,
+  .execution {
+    grid-template-columns: 1fr;
+  }
+
+  header,
+  .scenario-bar,
+  .product-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .proposed {
+    text-align: left;
+  }
+
+  select {
+    min-width: 100%;
+  }
+}
